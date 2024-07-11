@@ -1,0 +1,49 @@
+---
+title: "Data_1"
+author: "Mandy"
+date: "2024-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(sf)
+library(terra)
+library(patchwork)
+library(raster)
+
+library(biooracler)
+```
+
+```{r}
+library(biooracler)
+list_layers("Ocean Temperature")
+```
+
+```{r}
+dataset_id = "thetao_ssp245_2020_2100_depthmean"
+
+time = c('2080-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-76.98544, 128.68653) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+              
+# fill in here
+temp_mean <- download_layers(dataset_id, variables, constraints)
+```
+
+```{r}
+ggplot()+
+  geom_stars(data = st_as_stars(temp_mean))+
+  coord_equal()+
+  theme_bw()+
+  scale_fill_viridis_c()
+```
+
