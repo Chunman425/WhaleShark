@@ -24,7 +24,7 @@ library(biooracler)
 ```
 
 ```{r}
-dataset_id = "thetao_ssp245_2020_2100_depthmean"
+dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z','2090-01-01T00:00:00Z')
 
