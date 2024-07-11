@@ -23,7 +23,7 @@ list_layers("Chlorophyll")
 ```
 
 
-2090-2100 temp_mean
+2050 temp_mean
 ```{r}
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
