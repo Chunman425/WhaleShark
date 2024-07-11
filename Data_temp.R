@@ -1,1 +1,0 @@
-#an attempt to collect data 

@@ -13,6 +13,7 @@ library(sf)
 library(terra)
 library(patchwork)
 library(raster)
+library(stars)
 
 library(biooracler)
 ```
@@ -27,8 +28,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthmean"
 
 time = c('2080-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-76.98544, 128.68653) 
+latitude = c(0, 66.5629) 
+longitude = c(117.5162,-76.9854) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
