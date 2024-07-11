@@ -41,6 +41,24 @@ variables = "thetao_mean"
 temp_ssp2_2080 <- download_layers(dataset_id=dataset_id, variables = variables, constraints = constraints)
 ```
 
+
+```{r}
+dataset_id = "chl_ssp460_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-179.975, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# fill in here
+chl_ssp <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
 ```{r}
 ggplot()+
   geom_stars(data = st_as_stars(temp_ssp2_2080 ))+
@@ -48,4 +66,56 @@ ggplot()+
   theme_bw()+
   scale_fill_viridis_c()
 ```
+
+
+
+
+2090 ssp2 (45)
+```{r}
+#selecting dataset 
+dataset_id = "thetao_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.975, -74) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+              
+temp_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.75, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "mlotst_mean"
+              
+# fill in here
+mld_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+dataset_id = "chl_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-179.975, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# fill in here
+chl_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
 
