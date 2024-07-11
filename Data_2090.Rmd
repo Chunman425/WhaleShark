@@ -28,8 +28,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthmean"
 
 time = c('2090-01-01T00:00:00Z','2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78)
-longitude = c(-76.9844, 128.68653) 
+latitude = c(-58, 78) 
+longitude = c(-179.975, -74) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")

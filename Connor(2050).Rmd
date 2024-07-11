@@ -22,7 +22,8 @@ library(stars)
 list_layers("Chlorophyll")
 ```
 
-2050 ssp245
+
+2050 temp_mean
 ```{r}
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
@@ -45,8 +46,8 @@ dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(0, 58.21155) 
+longitude = c(-76.9844, 128.68653) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -54,7 +55,7 @@ names(constraints) = c("time", "latitude", "longitude")
 variables = "mlotst_mean"
               
 # fill in here
-mld_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+mld_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
 ```{r}
@@ -63,7 +64,7 @@ dataset_id = "chl_ssp245_2020_2100_depthsurf"
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
 latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+longitude = c(-76.9844, 128.68653) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -71,64 +72,12 @@ names(constraints) = c("time", "latitude", "longitude")
 variables = "chl_mean"
               
 # fill in here
-chl_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
-```
-
-2050 ssp 460
-```{r}
-dataset_id = "thetao_ssp460_2020_2100_depthsurf"
-
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
-
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
-
-constraints = list(time, latitude, longitude)
-names(constraints) = c("time", "latitude", "longitude")
-
-variables = "thetao_mean"
-              
-# fill in here
-temp_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
-```
-
-```{r}
-dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
-
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
-
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
-
-constraints = list(time, latitude, longitude)
-names(constraints) = c("time", "latitude", "longitude")
-
-variables = "mlotst_mean"
-              
-# fill in here
-mld_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
-```
-
-```{r}
-dataset_id = "chl_ssp460_2020_2100_depthsurf"
-
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
-
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
-
-constraints = list(time, latitude, longitude)
-names(constraints) = c("time", "latitude", "longitude")
-
-variables = "chl_mean"
-              
-# fill in here
-chl_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+chl_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
 ```{r}
 ggplot() +
-  geom_stars(data = st_as_stars(mld_mean4)) +
+  geom_stars(data = st_as_stars(temp_mean)) +
   coord_equal() +
   theme_bw() +
   scale_fill_viridis_c() +
