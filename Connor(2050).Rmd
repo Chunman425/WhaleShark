@@ -5,25 +5,82 @@ date: "2024-07-05"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r}
+# install.packages("devtools")
+devtools::install_github("bio-oracle/biooracler")
+library(biooracler)
+library(tidyverse)
+library(stars)
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+list_layers("Chlorophyll")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+2090-2100 temp_mean
+```{r}
+dataset_id = "thetao_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-76.9844, 128.68653) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+              
+# fill in here
+temp_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+```{r}
+dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-76.9844, 128.68653) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "mlotst_mean"
+              
+# fill in here
+mld_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+```{r}
+dataset_id = "chl_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-76.9844, 128.68653) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# fill in here
+chl_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+```{r}
+ggplot() +
+  geom_stars(data = st_as_stars(temp_mean)) +
+  coord_equal() +
+  theme_bw() +
+  scale_fill_viridis_c() +
+  labs(fill = "hi")
+```
+
