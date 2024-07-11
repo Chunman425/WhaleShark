@@ -30,7 +30,7 @@ dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
 latitude = c(-58, 78) 
-longitude = c(-76.9844, 128.68653) 
+longitude = c(-179.975, -74) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -38,7 +38,7 @@ names(constraints) = c("time", "latitude", "longitude")
 variables = "thetao_mean"
               
 # fill in here
-temp_mean <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+temp_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
 ```{r}
