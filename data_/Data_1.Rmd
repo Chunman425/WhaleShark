@@ -20,16 +20,16 @@ library(biooracler)
 
 ```{r}
 library(biooracler)
-list_layers("Ocean Temperature")
+#list_layers("Ocean Temperature")
 ```
 
 ```{r}
 dataset_id = "thetao_ssp245_2020_2100_depthmean"
 
-time = c('2090-01-01T00:00:00Z')
+time = c('2090-01-01T00:00:00Z','2090-01-01T00:00:00Z')
 
-latitude = c(-89.975, 89.975) 
-longitude = c(-179.975, 179.975) 
+latitude = c(-58, 78)
+longitude = c(-76.9844, 128.68653) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -38,7 +38,7 @@ variables = "thetao_mean"
 
 
 # fill in here
-temp_ssp2_2080 <- download_layers(dataset_id, variables, constraints)
+temp_ssp2_2080 <- download_layers(dataset_id=dataset_id, variables = variables, constraints = constraints)
 ```
 
 ```{r}
