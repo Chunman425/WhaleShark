@@ -22,12 +22,6 @@ library(stars)
 list_layers("Chlorophyll")
 ```
 
-<<<<<<< HEAD
-
-2050 temp_mean
-=======
-2050 ssp245
->>>>>>> 25513c367865e23dc544cba5de028874646c4363
 ```{r}
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
@@ -138,5 +132,9 @@ ggplot() +
   theme_bw() +
   scale_fill_viridis_c() +
   labs(fill = "hi")
+```
+
+```{r}
+class(temp_mean2)
 ```
 
