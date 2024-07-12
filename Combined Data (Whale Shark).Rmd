@@ -18,11 +18,13 @@ library(tidyverse)
 library(stars)
 ```
 
-2050 ssp245
+
+2020 ssp2 (45)
 ```{r}
+#identifying data set for surface temperature
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(-58, 78) 
 longitude = c(-179.975, -74) 
@@ -32,12 +34,13 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "thetao_mean"
               
-# fill in here
-temp_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+#downloading layer for temp
+temp_ssp2_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#identifying data set for depth 
 dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(-58, 78) 
 longitude = c(-179.75, -76.9844) 
@@ -47,12 +50,13 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "mlotst_mean"
               
-# fill in here
-mld_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+# downloading layer
+mld_ssp2_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#identifying data set for primary production 
 dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(0, 58.21155) 
 longitude = c(-179.975, -76.9844) 
@@ -62,15 +66,16 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "chl_mean"
               
-# fill in here
-chl_mean2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+# downloading layer 
+chl_ssp2_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
-2050 ssp 460
+2020 ssp 4 (60)
 ```{r}
+#temperature 
 dataset_id = "thetao_ssp460_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(-58, 78) 
 longitude = c(-179.975, -74) 
@@ -80,12 +85,13 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "thetao_mean"
               
-# fill in here
-temp_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+#downloading layer
+temp_ssp4_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#depth
 dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(-58, 78) 
 longitude = c(-179.75, -76.9844) 
@@ -95,12 +101,13 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "mlotst_mean"
               
-# fill in here
-mld_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+# download
+mld_ssp4_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#primary production 
 dataset_id = "chl_ssp460_2020_2100_depthsurf"
 
-time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
 latitude = c(0, 58.21155) 
 longitude = c(-179.975, -76.9844) 
@@ -110,13 +117,14 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "chl_mean"
               
-# fill in here
-chl_mean4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+# download
+chl_ssp4_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
 
 2090 ssp2 (45)
 ```{r}
+#temp
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -128,10 +136,12 @@ constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
 
 variables = "thetao_mean"
-              
-# fill in here
+
+#download
 temp_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+
+#depth
 dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -144,9 +154,10 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "mlotst_mean"
               
-# fill in here
+# download
 mld_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#primary production 
 dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -159,13 +170,170 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "chl_mean"
               
-# fill in here
+# download
 chl_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
 
-2090 ssp 460
+2050 ssp2 (45)
 ```{r}
+#identifying data set for surface temperature
+dataset_id = "thetao_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.975, -74) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+              
+#downloading layer for temp
+temp_ssp2_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+#identifying data set for depth 
+dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.75, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "mlotst_mean"
+              
+# downlaoding layer
+mld_ssp2_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+#identifying data set for primary production 
+dataset_id = "chl_ssp245_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-179.975, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# downloading layer 
+chl_ssp2_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+2050 ssp 4 (60)
+```{r}
+#temperature 
+dataset_id = "thetao_ssp460_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.975, -74) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+              
+#downloading layer
+temp_ssp4_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+#depth
+dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.75, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "mlotst_mean"
+              
+# download
+mld_ssp4_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+#primary production 
+dataset_id = "chl_ssp460_2020_2100_depthsurf"
+
+time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-179.975, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# download
+chl_ssp4_2050 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+
+2090 ssp2 (45)
+```{r}
+#temp
+dataset_id = "thetao_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.975, -74) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "thetao_mean"
+
+#download
+temp_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+
+#depth
+dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(-58, 78) 
+longitude = c(-179.75, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "mlotst_mean"
+              
+# download
+mld_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+
+#primary production 
+dataset_id = "chl_ssp245_2020_2100_depthsurf"
+
+time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
+
+latitude = c(0, 58.21155) 
+longitude = c(-179.975, -76.9844) 
+
+constraints = list(time, latitude, longitude)
+names(constraints) = c("time", "latitude", "longitude")
+
+variables = "chl_mean"
+              
+# download
+chl_2090_ssp2 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+```
+
+
+2090 ssp4 (60)
+```{r}
+#temp 
 dataset_id = "thetao_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -178,9 +346,10 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "thetao_mean"
               
-# fill in here
+# download
 temp_2090_ssp4<- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#depth
 dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -193,9 +362,10 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "mlotst_mean"
               
-# fill in here
+# download
 mld_2090_ssp4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 
+#primary production 
 dataset_id = "chl_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
@@ -208,5 +378,8 @@ names(constraints) = c("time", "latitude", "longitude")
 
 variables = "chl_mean"
               
-# fill in here
+# download 
 chl_2090_ssp4 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
+````
+
+
