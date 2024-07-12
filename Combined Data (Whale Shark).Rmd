@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE,
 
 ```{r}
 # install.packages("devtools")
-devtools::install_github("bio-oracle/biooracler")
+#devtools::install_github("bio-oracle/biooracler")
 library(biooracler)
 library(tidyverse)
 library(stars)
@@ -26,8 +26,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -42,8 +42,8 @@ dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -58,8 +58,8 @@ dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -70,6 +70,7 @@ variables = "chl_mean"
 chl_ssp2_2020 <- download_layers(dataset_id = dataset_id, variables = variables, constraints = constraints)
 ```
 
+
 2020 ssp 4 (60)
 ```{r}
 #temperature 
@@ -77,8 +78,8 @@ dataset_id = "thetao_ssp460_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -93,8 +94,8 @@ dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -109,8 +110,8 @@ dataset_id = "chl_ssp460_2020_2100_depthsurf"
 
 time = c('2020-01-01T00:00:00Z', '2020-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -129,8 +130,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86) 
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -146,8 +147,8 @@ dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -162,8 +163,8 @@ dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -182,8 +183,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -198,8 +199,8 @@ dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -214,8 +215,8 @@ dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -233,8 +234,8 @@ dataset_id = "thetao_ssp460_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -249,8 +250,8 @@ dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -265,8 +266,8 @@ dataset_id = "chl_ssp460_2020_2100_depthsurf"
 
 time = c('2050-01-01T00:00:00Z', '2050-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -285,8 +286,8 @@ dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -302,8 +303,8 @@ dataset_id = "mlotst_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -318,8 +319,8 @@ dataset_id = "chl_ssp245_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -338,8 +339,8 @@ dataset_id = "thetao_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.975, -74) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -354,8 +355,8 @@ dataset_id = "mlotst_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(-58, 78) 
-longitude = c(-179.75, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
@@ -370,8 +371,8 @@ dataset_id = "chl_ssp460_2020_2100_depthsurf"
 
 time = c('2090-01-01T00:00:00Z', '2090-01-01T00:00:00Z')
 
-latitude = c(0, 58.21155) 
-longitude = c(-179.975, -76.9844) 
+latitude = c(31.14, 14.37)
+longitude = c(-80.63, -98.86)
 
 constraints = list(time, latitude, longitude)
 names(constraints) = c("time", "latitude", "longitude")
