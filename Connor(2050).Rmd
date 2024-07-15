@@ -22,6 +22,18 @@ library(stars)
 list_layers("Chlorophyll")
 ```
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+2050 temp_mean
+=======
+2050 ssp245
+>>>>>>> 25513c367865e23dc544cba5de028874646c4363
+=======
+>>>>>>> 1ae7622652a49599f142ee4831eb1d45d45b5ad4
+=======
+>>>>>>> 1ae7622652a49599f142ee4831eb1d45d45b5ad4
 ```{r}
 dataset_id = "thetao_ssp245_2020_2100_depthsurf"
 
@@ -134,7 +146,16 @@ ggplot() +
   labs(fill = "hi")
 ```
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1ae7622652a49599f142ee4831eb1d45d45b5ad4
 ```{r}
 class(temp_mean2)
 ```
 
+<<<<<<< HEAD
+>>>>>>> 1ae7622652a49599f142ee4831eb1d45d45b5ad4
+=======
+>>>>>>> 1ae7622652a49599f142ee4831eb1d45d45b5ad4
